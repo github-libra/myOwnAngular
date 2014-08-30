@@ -1,5 +1,5 @@
 
-n Scope() {
+function Scope() {
   this.$$watchers = [];
   this.$$asyncQueue = [];
   this.$$postDigestQueue = [];
@@ -121,7 +121,6 @@ Scope.prototype.$evalAsync = function(expr) {
 Scope.prototype.$$postDigest = function(fn) {
   this.$$postDigestQueue.push(fn);
 };
-
 
 var scope = new Scope();
 scope.aValue = "abc";
